@@ -2,123 +2,251 @@
 
 import { motion } from "framer-motion";
 
-export default function Home() {
+export default function ResumePage() {
   const skills = [
     "HTML",
     "CSS",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "TypeScript",
-    "API Integration",
-    "VS Code",
+    "PYTHON",
+    "CLOUD COMPUTING",
+    "NEXT JS",
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-950 text-white overflow-hidden relative">
+    <main className="min-h-screen bg-black py-10 px-4">
 
-      {/* Background blur */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-pink-500 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
-
-      <div className="relative max-w-7xl mx-auto px-6 py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-purple-900"
+      >
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
+        <section className="bg-gradient-to-r from-black via-purple-950 to-purple-700 text-white px-8 md:px-14 py-12">
+
           <div className="flex flex-col md:flex-row items-center gap-10">
 
             <motion.img
-              whileHover={{ scale: 1.08 }}
+              whileHover={{ scale: 1.05 }}
               src="/sathya.jpeg"
               alt="profile"
-              className="w-44 h-44 rounded-full border-4 border-pink-500 shadow-2xl object-cover"
+              className="w-44 h-44 rounded-full border-4 border-purple-400 shadow-2xl object-cover"
             />
 
             <div className="text-center md:text-left">
-              <h1 className="text-6xl font-extrabold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+
+              <h1 className="text-5xl md:text-6xl font-extrabold">
                 Sathya R
               </h1>
 
-              <p className="text-2xl mt-3 text-gray-300">
-                Frontend Developer | Next.js Developer
+              <p className="mt-4 text-2xl text-purple-200">
+                Diploma in Computer Engineering (3rd Year)
               </p>
+
+              <p className="mt-3 text-lg text-gray-300">
+                Paavai Polytechnic College - Namakkal, Tamilnadu - 637201
+              </p>
+
+              <div className="mt-6 flex flex-col md:flex-row gap-4 md:gap-8 text-gray-300 text-base">
+                <p>📞 8220292319</p>
+                <p>✉️ rangasamysathya31@gmail.com</p>
+              </div>
+
+              <p className="mt-3 text-gray-300">
+                📍 Namakkal, Tamilnadu
+              </p>
+
             </div>
 
           </div>
-        </motion.div>
+
+        </section>
 
         {/* About */}
-        <motion.section
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
-          <h2 className="text-4xl font-bold text-pink-400">
-            About Me
-          </h2>
+        <section className="px-8 md:px-14 py-12">
 
-          <p className="mt-6 text-lg text-gray-300 leading-9">
-            Passionate frontend developer interested in creating modern
-            and responsive web applications using React, Next.js and Tailwind CSS.
-          </p>
-        </motion.section>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-white border border-purple-200 rounded-3xl p-8 shadow-lg"
+          >
+
+            <h2 className="text-4xl font-extrabold text-purple-900">
+              About Me
+            </h2>
+
+            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
+
+            <p className="mt-6 text-gray-700 text-lg leading-9">
+              Enthusiastic and hardworking Computer Engineering student
+              with strong interest in software development, cloud
+              computing, and web technologies. Passionate about learning
+              modern tools and creating responsive applications with
+              user-friendly interfaces. Quick learner with good teamwork,
+              communication, and problem-solving skills.
+            </p>
+
+          </motion.div>
+
+        </section>
 
         {/* Skills */}
-        <motion.section
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
-          <h2 className="text-4xl font-bold text-pink-400">
-            Skills
-          </h2>
+        <section className="px-8 md:px-14 pb-12">
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="bg-white border border-purple-200 rounded-3xl p-8 shadow-lg"
+          >
 
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.08 }}
-                className="bg-gradient-to-r from-pink-500 to-purple-600 p-5 rounded-2xl text-center text-lg font-semibold shadow-xl"
-              >
-                {skill}
-              </motion.div>
-            ))}
+            <h2 className="text-4xl font-extrabold text-purple-900">
+              Skills
+            </h2>
 
-          </div>
-        </motion.section>
+            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
+
+            <div className="flex flex-wrap gap-5 mt-8">
+
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.08 }}
+                  className="bg-gradient-to-r from-black via-purple-900 to-purple-700 text-white px-6 py-4 rounded-2xl shadow-xl font-semibold text-lg"
+                >
+                  {skill}
+                </motion.div>
+              ))}
+
+            </div>
+
+          </motion.div>
+
+        </section>
 
         {/* Education */}
-        <motion.section
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-2xl"
-        >
-          <h2 className="text-4xl font-bold text-pink-400">
-            Education
-          </h2>
+        <section className="px-8 md:px-14 pb-12">
 
-          <div className="mt-6 bg-gradient-to-r from-pink-500 to-purple-600 p-6 rounded-2xl">
-            <h3 className="text-2xl font-bold">
-              Diploma in Computer Science Engineering
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="bg-white border border-purple-200 rounded-3xl p-8 shadow-lg"
+          >
+
+            <h2 className="text-4xl font-extrabold text-purple-900">
+              Education
+            </h2>
+
+            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
+
+            <div className="mt-6">
+
+              <h3 className="text-2xl font-bold text-gray-800">
+                Diploma in Computer Engineering
+              </h3>
+
+              <p className="mt-2 text-lg text-gray-700">
+                Paavai Polytechnic College
+              </p>
+
+              <p className="text-gray-600">
+                Namakkal, Tamilnadu - 637201
+              </p>
+
+              <p className="mt-2 font-semibold text-purple-700">
+                Currently Pursuing 3rd Year
+              </p>
+
+            </div>
+
+          </motion.div>
+
+        </section>
+
+        {/* Project */}
+        <section className="px-8 md:px-14 pb-12">
+
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1 }}
+            className="bg-gradient-to-r from-black via-purple-950 to-purple-800 text-white rounded-3xl p-8 shadow-2xl"
+          >
+
+            <h2 className="text-4xl font-extrabold">
+              Project
+            </h2>
+
+            <div className="w-24 h-1 bg-purple-400 rounded-full mt-3"></div>
+
+            <h3 className="mt-6 text-2xl font-bold text-purple-200">
+              Online Library Book Management System
             </h3>
 
-            <p>Paavai Polytechnic College</p>
+            <p className="mt-5 text-lg leading-9 text-gray-200">
+              Developed an Online Library Book Management System to
+              simplify the process of maintaining library records and
+              managing books digitally. The project helps students and
+              administrators easily handle library operations without
+              manual paperwork.
+            </p>
 
-            <p>2023 - 2026</p>
-          </div>
-        </motion.section>
+            <p className="mt-5 text-lg leading-9 text-gray-200">
+              The system includes features such as adding books,
+              searching books by title or category, issuing and returning
+              books, student management, and tracking book availability.
+              Admin users can efficiently update records and manage all
+              library activities through a simple dashboard.
+            </p>
 
-      </div>
+            <p className="mt-5 text-lg leading-9 text-gray-200">
+              This project improved knowledge in frontend development,
+              database management, responsive UI design, and handling
+              real-time data efficiently in web applications.
+            </p>
+
+          </motion.div>
+
+        </section>
+
+        {/* Achievement */}
+        <section className="px-8 md:px-14 pb-14">
+
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2 }}
+            className="bg-white border border-purple-300 rounded-3xl p-8 shadow-lg"
+          >
+
+            <h2 className="text-4xl font-extrabold text-purple-900">
+              Achievement
+            </h2>
+
+            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
+
+            <div className="mt-6">
+
+              <h3 className="text-2xl font-bold text-purple-700">
+                Futures of AI Hackathon
+              </h3>
+
+              <p className="mt-4 text-lg text-gray-700 leading-9">
+                Participated in the Futures of AI Hackathon and secured
+                Third Place. Received certification for innovative idea
+                presentation, teamwork, and technical performance during
+                the competition.
+              </p>
+
+            </div>
+
+          </motion.div>
+
+        </section>
+
+      </motion.div>
 
     </main>
   );
