@@ -1,253 +1,265 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ResumePage() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "PYTHON",
-    "CLOUD COMPUTING",
-    "NEXT JS",
-  ];
-
   return (
-    <main className="min-h-screen bg-black py-10 px-4">
-
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-purple-900"
-      >
+    <main className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 py-10 px-4">
+      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-pink-200">
 
         {/* Header */}
-        <section className="bg-gradient-to-r from-black via-purple-950 to-purple-700 text-white px-8 md:px-14 py-12">
+        <div className="bg-pink-300 text-black p-8 md:p-10">
+          <div className="flex flex-col md:flex-row items-center gap-8">
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
+            {/* Profile Image */}
+            <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-black shadow-xl">
+              <Image
+                src="/sathya.jpeg"
+                alt="Sathya R"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-            <motion.img
-              whileHover={{ scale: 1.05 }}
-              src="/sathya.jpeg"
-              alt="profile"
-              className="w-44 h-44 rounded-full border-4 border-purple-400 shadow-2xl object-cover"
-            />
-
-            <div className="text-center md:text-left">
-
-              <h1 className="text-5xl md:text-6xl font-extrabold">
-                Sathya R
+            {/* Profile Info */}
+            <div className="flex-1">
+              <h1 className="text-5xl font-black tracking-wide">
+                SATHYA R
               </h1>
 
-              <p className="mt-4 text-2xl text-purple-200">
-                Diploma in Computer Engineering (3rd Year)
-              </p>
-
-              <p className="mt-3 text-lg text-gray-300">
-                Paavai Polytechnic College - Namakkal, Tamilnadu - 637201
-              </p>
-
-              <div className="mt-6 flex flex-col md:flex-row gap-4 md:gap-8 text-gray-300 text-base">
-                <p>📞 8220292319</p>
-                <p>✉️ rangasamysathya31@gmail.com</p>
-              </div>
-
-              <p className="mt-3 text-gray-300">
-                📍 Namakkal, Tamilnadu
-              </p>
-
-            </div>
-
-          </div>
-
-        </section>
-
-        {/* About */}
-        <section className="px-8 md:px-14 py-12">
-
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-white border border-purple-200 rounded-3xl p-8 shadow-lg"
-          >
-
-            <h2 className="text-4xl font-extrabold text-purple-900">
-              About Me
-            </h2>
-
-            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
-
-            <p className="mt-6 text-gray-700 text-lg leading-9">
-              Enthusiastic and hardworking Computer Engineering student
-              with strong interest in software development, cloud
-              computing, and web technologies. Passionate about learning
-              modern tools and creating responsive applications with
-              user-friendly interfaces. Quick learner with good teamwork,
-              communication, and problem-solving skills.
-            </p>
-
-          </motion.div>
-
-        </section>
-
-        {/* Skills */}
-        <section className="px-8 md:px-14 pb-12">
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
-            className="bg-white border border-purple-200 rounded-3xl p-8 shadow-lg"
-          >
-
-            <h2 className="text-4xl font-extrabold text-purple-900">
-              Skills
-            </h2>
-
-            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
-
-            <div className="flex flex-wrap gap-5 mt-8">
-
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.08 }}
-                  className="bg-gradient-to-r from-black via-purple-900 to-purple-700 text-white px-6 py-4 rounded-2xl shadow-xl font-semibold text-lg"
-                >
-                  {skill}
-                </motion.div>
-              ))}
-
-            </div>
-
-          </motion.div>
-
-        </section>
-
-        {/* Education */}
-        <section className="px-8 md:px-14 pb-12">
-
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="bg-white border border-purple-200 rounded-3xl p-8 shadow-lg"
-          >
-
-            <h2 className="text-4xl font-extrabold text-purple-900">
-              Education
-            </h2>
-
-            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
-
-            <div className="mt-6">
-
-              <h3 className="text-2xl font-bold text-gray-800">
+              <p className="text-xl mt-3 font-semibold">
                 Diploma in Computer Engineering
-              </h3>
-
-              <p className="mt-2 text-lg text-gray-700">
-                Paavai Polytechnic College
               </p>
 
-              <p className="text-gray-600">
-                Namakkal, Tamilnadu - 637201
-              </p>
-
-              <p className="mt-2 font-semibold text-purple-700">
-                Currently Pursuing 3rd Year
-              </p>
-
+              <div className="mt-5 grid md:grid-cols-2 gap-3 text-sm font-medium">
+                <p>📍 Namakkal, Tamil Nadu</p>
+                <p>📧 rangasamysathya31@gmail.com</p>
+                <p>📞 +91 8220291319</p>
+                <p>🏫 Paavai Polytechnic College - Namakkal</p>
+              </div>
             </div>
+          </div>
+        </div>
 
-          </motion.div>
+        {/* Body */}
+        <div className="grid md:grid-cols-3">
 
-        </section>
+          {/* Sidebar */}
+          <aside className="bg-pink-50 p-8 border-r border-pink-200">
 
-        {/* Project */}
-        <section className="px-8 md:px-14 pb-12">
+            {/* Skills */}
+            <section>
+              <h2 className="text-2xl font-black text-black mb-5 border-b-2 border-pink-300 pb-3">
+                Skills
+              </h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1 }}
-            className="bg-gradient-to-r from-black via-purple-950 to-purple-800 text-white rounded-3xl p-8 shadow-2xl"
-          >
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Java",
+                  "Python",
+                  "Next JS",
+                  "HTML",
+                  "CSS",
+                  "MySQL",
+                ].map((skill) => (
+                  <div
+                    key={skill}
+                    className="bg-pink-400 text-black px-4 py-2 rounded-full text-sm font-bold shadow-md"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </section>
 
-            <h2 className="text-4xl font-extrabold">
-              Project
-            </h2>
+            {/* Education */}
+            <section className="mt-12">
+              <h2 className="text-2xl font-black text-black mb-5 border-b-2 border-pink-300 pb-3">
+                Education
+              </h2>
 
-            <div className="w-24 h-1 bg-purple-400 rounded-full mt-3"></div>
+              <div className="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
+                <h3 className="text-lg font-bold text-black">
+                  Diploma in Computer Engineering
+                </h3>
 
-            <h3 className="mt-6 text-2xl font-bold text-purple-200">
-              Online Library Book Management System
-            </h3>
+                <p className="text-gray-700 mt-2 font-medium">
+                  Paavai Polytechnic College
+                </p>
 
-            <p className="mt-5 text-lg leading-9 text-gray-200">
-              Developed an Online Library Book Management System to
-              simplify the process of maintaining library records and
-              managing books digitally. The project helps students and
-              administrators easily handle library operations without
-              manual paperwork.
-            </p>
+                <p className="text-gray-600 text-sm mt-1">
+                  Namakkal, Tamil Nadu
+                </p>
+              </div>
+            </section>
 
-            <p className="mt-5 text-lg leading-9 text-gray-200">
-              The system includes features such as adding books,
-              searching books by title or category, issuing and returning
-              books, student management, and tracking book availability.
-              Admin users can efficiently update records and manage all
-              library activities through a simple dashboard.
-            </p>
+            {/* Languages */}
+            <section className="mt-12">
+              <h2 className="text-2xl font-black text-black mb-5 border-b-2 border-pink-300 pb-3">
+                Languages
+              </h2>
 
-            <p className="mt-5 text-lg leading-9 text-gray-200">
-              This project improved knowledge in frontend development,
-              database management, responsive UI design, and handling
-              real-time data efficiently in web applications.
-            </p>
+              <div className="bg-white rounded-2xl p-5 shadow-md border border-pink-100">
+                <ul className="space-y-3 text-black font-medium">
+                  <li>✅ English</li>
+                  <li>✅ Tamil</li>
+                </ul>
+              </div>
+            </section>
+          </aside>
 
-          </motion.div>
+          {/* Main Content */}
+          <section className="md:col-span-2 p-8 md:p-10">
 
-        </section>
+            {/* Profile */}
+            <section>
+              <h2 className="text-3xl font-black text-black mb-5">
+                Profile
+              </h2>
 
-        {/* Achievement */}
-        <section className="px-8 md:px-14 pb-14">
+              <div className="bg-pink-50 border border-pink-100 rounded-2xl p-6 shadow-sm">
+                <p className="text-gray-800 leading-8">
+                  Motivated and passionate Computer Engineering student
+                  with strong interest in software development, web
+                  applications, and modern technologies. Skilled in
+                  Java, Python, Next JS, HTML, CSS, and MySQL with
+                  practical experience in building responsive
+                  applications and database-driven systems.
+                </p>
+              </div>
+            </section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
-            className="bg-white border border-purple-300 rounded-3xl p-8 shadow-lg"
-          >
+            {/* Experience */}
+            <section className="mt-12">
+              <h2 className="text-3xl font-black text-black mb-6">
+                Experience
+              </h2>
 
-            <h2 className="text-4xl font-extrabold text-purple-900">
-              Achievement
-            </h2>
+              <div className="space-y-6">
 
-            <div className="w-24 h-1 bg-purple-700 rounded-full mt-3"></div>
+                {/* Internship */}
+                <div className="bg-white border border-pink-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+                  <div className="flex items-center justify-between flex-wrap gap-3">
+                    <h3 className="text-2xl font-bold text-black">
+                      Next JS Intern
+                    </h3>
 
-            <div className="mt-6">
+                    <span className="bg-pink-200 text-black px-4 py-1 rounded-full text-sm font-bold">
+                      15 Days
+                    </span>
+                  </div>
 
-              <h3 className="text-2xl font-bold text-purple-700">
-                Futures of AI Hackathon
-              </h3>
+                  <p className="text-pink-600 font-bold mt-2">
+                    SBS Technologies, Erode
+                  </p>
 
-              <p className="mt-4 text-lg text-gray-700 leading-9">
-                Participated in the Futures of AI Hackathon and secured
-                Third Place. Received certification for innovative idea
-                presentation, teamwork, and technical performance during
-                the competition.
-              </p>
+                  <ul className="list-disc ml-6 mt-5 space-y-3 text-gray-800 leading-7">
+                    <li>
+                      Worked on modern e-commerce web applications
+                      using Next JS.
+                    </li>
 
-            </div>
+                    <li>
+                      Developed responsive UI pages using HTML,
+                      CSS, and Tailwind CSS.
+                    </li>
 
-          </motion.div>
+                    <li>
+                      Learned API integration and frontend
+                      optimization techniques.
+                    </li>
 
-        </section>
+                    <li>
+                      Collaborated with developers to improve
+                      user experience and application performance.
+                    </li>
+                  </ul>
+                </div>
 
-      </motion.div>
+                {/* Hackathon */}
+                <div className="bg-white border border-pink-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+                  <div className="flex items-center justify-between flex-wrap gap-3">
+                    <h3 className="text-2xl font-bold text-black">
+                      Hackathon Achievement
+                    </h3>
 
+                    <span className="bg-pink-200 text-black px-4 py-1 rounded-full text-sm font-bold">
+                      Futures of AI
+                    </span>
+                  </div>
+
+                  <p className="text-pink-600 font-bold mt-2">
+                    Won 3rd Place
+                  </p>
+
+                  <ul className="list-disc ml-6 mt-5 space-y-3 text-gray-800 leading-7">
+                    <li>
+                      Participated in the Futures of AI Hackathon
+                      and secured 3rd place.
+                    </li>
+
+                    <li>
+                      Developed innovative AI-related ideas and
+                      collaborated effectively in a team environment.
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </section>
+
+            {/* Projects */}
+            <section className="mt-12">
+              <h2 className="text-3xl font-black text-black mb-6">
+                Projects
+              </h2>
+
+              <div className="bg-white border border-pink-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+                <h3 className="text-2xl font-bold text-black">
+                  Online Library Book Management System
+                </h3>
+
+                <ul className="list-disc ml-6 mt-5 space-y-4 text-gray-800 leading-8">
+                  <li>
+                    Developed a complete Online Library Book
+                    Management System for managing books,
+                    students, and library records digitally.
+                  </li>
+
+                  <li>
+                    Created features to add, update, delete,
+                    search, issue, and return books through
+                    a user-friendly interface.
+                  </li>
+
+                  <li>
+                    Implemented student management and book
+                    availability tracking using MySQL database
+                    integration.
+                  </li>
+
+                  <li>
+                    Reduced manual paperwork and improved
+                    library management efficiency through
+                    automation.
+                  </li>
+
+                  <li>
+                    Used Java, Python, HTML, CSS, Next JS,
+                    and MySQL for frontend, backend, and
+                    database development.
+                  </li>
+
+                  <li>
+                    Improved knowledge in frontend design,
+                    backend logic, database management,
+                    and problem-solving skills.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+          </section>
+        </div>
+      </div>
     </main>
   );
 }
