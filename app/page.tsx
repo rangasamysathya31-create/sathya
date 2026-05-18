@@ -219,38 +219,41 @@ export default function ResumePage() {
 
                 <ul className="list-disc ml-6 mt-5 space-y-4 text-gray-800 leading-8">
                   <li>
-                    Developed a complete Online Library Book
-                    Management System for managing books,
-                    students, and library records digitally.
+                    Developed an Online Library Book Management System
+                    to manage books, students, and library activities
+                    digitally.
                   </li>
 
                   <li>
-                    Created features to add, update, delete,
-                    search, issue, and return books through
-                    a user-friendly interface.
+                    Created features for adding, updating, searching,
+                    issuing, and returning books through a simple and
+                    user-friendly interface.
                   </li>
 
                   <li>
-                    Implemented student management and book
-                    availability tracking using MySQL database
-                    integration.
+                    Maintained student details and book records using
+                    MySQL database integration.
                   </li>
 
                   <li>
-                    Reduced manual paperwork and improved
-                    library management efficiency through
-                    automation.
+                    Designed the frontend interface using HTML and CSS
+                    for better user experience and responsive layout.
                   </li>
 
                   <li>
-                    Used Java, Python, HTML, CSS, Next JS,
-                    and MySQL for frontend, backend, and
-                    database development.
+                    Implemented backend functionalities using Java
+                    to handle library operations and database
+                    connectivity.
                   </li>
 
                   <li>
-                    Improved knowledge in frontend design,
-                    backend logic, database management,
+                    Reduced manual paperwork and improved the efficiency
+                    of managing library records digitally.
+                  </li>
+
+                  <li>
+                    Improved practical knowledge in Java programming,
+                    database management, frontend development,
                     and problem-solving skills.
                   </li>
                 </ul>
